@@ -1,0 +1,11 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+<h1>Hello {{request.user}}</h1>
+<ul>
+    <li>Username  = {{request.user.username}}</li>
+    <li>email = {{request.user.email}}</li>
+    <h2>Thank you {{request.user}}</h2>
+</ul>
+<a href="{% url 'login'%}">Log Out</a>
+{%endblock%}
